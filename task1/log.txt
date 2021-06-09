@@ -1,0 +1,11 @@
+commit d8bf5567484ca1ce48f1335613042b795e3cdb79
+Author: Oleh Bandrivskyi <o.bandrivskyi@gmail.com>
+Date:   Wed Jun 9 14:43:26 2021 +0300
+
+    add status.txt
+
+commit 2b5637421f8ae12844f2492899342841340b8470
+Author: Oleh Bandrivskyi <o.bandrivskyi@gmail.com>
+Date:   Wed Jun 9 14:36:12 2021 +0300
+
+    add .gitignore
