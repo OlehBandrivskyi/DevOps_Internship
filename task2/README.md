@@ -9,23 +9,26 @@ URL страницы "Hello World" [[3.120.145.171](http://3.120.145.171/)]
 **Решение:**
 1. Создано два отдельных VPC в разных регионах и с разными диапазонами CIDRs, с их последующим соединением:
 
-img1
+![img1](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/8bc8a1476c88c874e4c1f8e0cb1fb718a9137573/task2/img/img1.jpg)
+
 2. Настроено маршрутизацию трафика между подсетями VPC:
 
-img2
+![img2](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/8bc8a1476c88c874e4c1f8e0cb1fb718a9137573/task2/img/img2.jpg)
+
 3. Проверка соединения с помощью SSH из инстанса A (_VPC1_Frankfurt_amazonlinux_) к инстансу В (_VPC2_London_Ubuntu_) по внутреннему IP: 
 
-img3
+![img3](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/8bc8a1476c88c874e4c1f8e0cb1fb718a9137573/task2/img/img3.jpg)
+
 4. Проверка связи по внешнему ІР: 
 
-img4 
+![img4](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/8bc8a1476c88c874e4c1f8e0cb1fb718a9137573/task2/img/img4.jpg)
 
 **Условие:**
 > Написать BASH скрипт для установки веб сервера (nginx/apache) и веб страницы с текстом “Hello World”, и информацией о текущей версией операционной системы
 
 
 **Решение:**
-[[extraTask2.sh](http://3.120.145.171/)]
+[[extraTask2.sh](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/8bc8a1476c88c874e4c1f8e0cb1fb718a9137573/task2/extraTask2.sh)]
 
 **Условие:**
 > Выполнить п.6 не заходя “руками” по SSH на EC2 instance.
