@@ -5,22 +5,29 @@ services:
     mytask3:
         image: bandrivskyi/task3
         ports: 
-            - ${PORT_APP}
+            - ${APP_PORT}
         environment:
             DEVOPS: ${DO_NAME} 
         working_dir: ${APP_HOME_DIR}
         restart: always
-        links: 
+        depends_on:
             - db
+        deploy:
+            mode: replicated
+            replicas: 5
 
     javaapp:
-        image: groovy
-        container_name: groovy
-        working_dir: ${APP_JAVA_HOME_DIR}
+        image: jenkins/jenkins:lts-jdk11
+        container_name: jenkins
+        working_dir: ${JENKINS_HOME_DIR} 
+        ports:
+            - ${JENKINS_CONNECT_PORT}
+            - ${JENKINS_PORT}
+        volumes: 
+            - ${JENKINS_PATH_HOST}:${JENKINS_HOME_DIR}
         restart: always
-        links: 
+        depends_on: 
             - db
-            - mytask3
             
 
     db:
@@ -32,5 +39,5 @@ services:
             MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_DATABASE: ${MYSQL_DB_NAME}
         ports: 
-            - ${PORT_DB}
+            - ${DB_PORT}
         restart: always
