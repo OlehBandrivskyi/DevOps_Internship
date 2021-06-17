@@ -1,3 +1,3 @@
 #VS Code
 *.code-workspace
-/task3/.env
+task3/.env
