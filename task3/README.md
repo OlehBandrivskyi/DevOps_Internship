@@ -23,7 +23,7 @@ docker pull hello-world
 
 Установка веб-сервера apache:
 ```
-docker run -dit -name my-apache-page -p 8080:80 httpd:2.4
+docker run -d --name my-apache-page -p 8080:80 httpd:2.4
 ```
 
 Вход в контейнер для изменения страницы:
