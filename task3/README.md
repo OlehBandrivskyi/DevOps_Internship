@@ -1,6 +1,6 @@
 # Task 3: Docker
 
-Все задание выполнялись в AWS EC2 на базе Ubuntu
+Все задания выполнялись в AWS EC2 на базе Ubuntu
 
 
 **Условие:**
@@ -46,11 +46,14 @@ docker exec -it 8759b2355e4 /bin/bash
 >EXTRA 3.2.1. Print environment variable with the value on a web page (if environment variable changed after container restart - the web page must be updated with a new value)
 
 **Решение:**
+
 Докерфайл доступен по ссылке [[Dockerfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d52bd94a043aa8ba969e35007eab90b2412e805e/task3/Dockerfile)]
 
 Результат:
 
+
 ![img7](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/6f1b77c7dc21c4bff8be60feec3e80378a9efdd2/task3/img/img7.jpg)
+
 
 ![img8](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/6f1b77c7dc21c4bff8be60feec3e80378a9efdd2/task3/img/img8.jpg)
 
@@ -88,6 +91,7 @@ Docker-Compose доступен по ссылке [[docker-compose.yml](https://
 .env файл доступен по ссылке [[.env](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d52bd94a043aa8ba969e35007eab90b2412e805e/task3/.env)]
 
 Развертывание:
+
 
 ![img13](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/6f1b77c7dc21c4bff8be60feec3e80378a9efdd2/task3/img/img13.jpg)
 
