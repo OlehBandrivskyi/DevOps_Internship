@@ -88,10 +88,10 @@ docker exec -it 8759b2355e4 /bin/bash
 
 Docker-Compose доступен по ссылке [[docker-compose.yml](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d52bd94a043aa8ba969e35007eab90b2412e805e/task3/docker-compose.yml)]
 
-.env.example файл доступен по ссылке [[.env](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d52bd94a043aa8ba969e35007eab90b2412e805e/task3/.env.example)]
+.env.example файл доступен по ссылке [[.env.example](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/f706071d36093b877a8af2025a43aad57656d64c/task3/env.example)]
 
 Развертывание:
 
 
-![img15](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/6f1b77c7dc21c4bff8be60feec3e80378a9efdd2/task3/img/img15.jpg)
+![img15](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/f706071d36093b877a8af2025a43aad57656d64c/task3/img/img15.jpg)
 
