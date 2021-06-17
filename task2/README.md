@@ -1,5 +1,5 @@
 # Task 2: AWS Cloud
-## _The Last Markdown Editor, Ever_
+
 URL страницы "Hello World" [[3.120.145.171](http://3.120.145.171/)]
 
 ## Exta tasks
@@ -45,4 +45,4 @@ URL страницы "Hello World" [[3.120.145.171](http://3.120.145.171/)]
 ```
 curl -o check.txt http://3.120.145.171 &&  aws s3 cp check.txt s3://cont-task2bucket/
 ```
-Результат доступен на по [ссылке на S3](https://cont-task2bucket.s3.eu-west-2.amazonaws.com/check.txt)
+Результат доступен по [ссылке на S3](https://cont-task2bucket.s3.eu-west-2.amazonaws.com/check.txt)
