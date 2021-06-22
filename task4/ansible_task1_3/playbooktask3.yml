@@ -1,0 +1,29 @@
+- name: Install DockerEngine on instances
+  hosts: all
+  become: yes
+
+  tasks:
+
+  - block:
+
+    - name: Update all packages
+      yum:
+          name: '*'
+          state: latest
+          update_only: yes
+
+    - name: Install the most recent Docker Engine package
+      shell: "amazon-linux-extras install docker -y"
+      notify: Add user to the docker groupe
+
+    - name: Start the Docker service at startup
+      service:
+          name: docker
+          state: started
+          enabled: yes
+
+    when: ansible_os_family== "RedHat"
+
+  handlers:
+  - name: Add user to the docker groupe
+    shell: "usermod -a -G docker ec2-user"
