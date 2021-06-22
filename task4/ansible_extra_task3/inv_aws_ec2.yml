@@ -1,0 +1,9 @@
+plugin: aws_ec2
+aws_profile: default
+regions:
+  - eu-central-1
+keyed_groups:
+  - prefix: type
+    key: tags['Type']
+  - prefix: group
+    key: tags['Group']
