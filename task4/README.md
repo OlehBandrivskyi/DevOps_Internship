@@ -25,6 +25,8 @@ ansible all -m ping
 ```
 
 Результат:
+
+
 ![img3](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/img/img3.jpg)
 
 
@@ -48,7 +50,8 @@ ansible all -m ping
 
 Создано две группы инстансов (для работы с БД и ВП отдельно)  [[hosts](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/ansible_extra_task1_2/hosts.txt)].
 
-[[Dockerfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/ansible_extra_task1_2/dockerfiles/wp/Dockerfile)] для WP и [[env.list.example)](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/eb517a1d5491db67c52b96583ee4b7d0e1c660e9/task4/ansible_extra_task1_2/dockerfiles/wp/env.list.example). 
+[[Dockerfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/ansible_extra_task1_2/dockerfiles/wp/Dockerfile)] для WP и [[env.list.example]](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/eb517a1d5491db67c52b96583ee4b7d0e1c660e9/task4/ansible_extra_task1_2/dockerfiles/wp/env.list.example). 
+
 [[Dockerfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/ansible_extra_task1_2/dockerfiles/db/Dockerfile)] для DB и [[env.list.example)](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/ansible_extra_task1_2/dockerfiles/db/env.list.example).
 
 Плейбук доступен по ссылке [[playbookextra.yml]](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/eb517a1d5491db67c52b96583ee4b7d0e1c660e9/task4/ansible_extra_task1_2/playbookextra.yml).
@@ -69,7 +72,7 @@ ansible all -m ping
 ```
 ansible-galaxy collection install amazon.aws
 ```
-[[inv_awsc_ec2.yml](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/eb517a1d5491db67c52b96583ee4b7d0e1c660e9/task4/ansible_extra_task3/inv_aws_ec2.yml)
+[[inv_awsc_ec2.yml]](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/eb517a1d5491db67c52b96583ee4b7d0e1c660e9/task4/ansible_extra_task3/inv_aws_ec2.yml)
 
 ![img7](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/26e3c1fc7c34cc2425496658697d592ebb5b3c51/task4/img/img13.jpg)
 
