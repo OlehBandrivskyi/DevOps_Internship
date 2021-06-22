@@ -6,4 +6,5 @@
 | ------ | ------ | ------ | ------ |
 |:heavy_check_mark:|[Task1](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task1)| Git/GitHub | Знакомство с Git (init/ config/ status/ add/ commit / ammed/ rest/ log/ push/ clone/ pull)
 | :heavy_check_mark:|[Task2](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task2) | AWS Cloud, Bash | EC2/ VPC (SG/Route/Peering/ElasticIP)/ S3) |
-| :hammer_and_wrench:|[Task3](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task3) | Docker | Install/ images/ containers/ dockerfile/ docker-compose/ autobuild/ |
+| :heavy_check_mark:|[Task3](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task3) | Docker | Install/ images/ containers/ dockerfile/ docker-compose/ autobuild/ |
+| :hammer_and_wrench:|[Task4](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task4) | Ansible | Playbook/ Dynamic Inventory/ |
