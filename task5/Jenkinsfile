@@ -21,15 +21,17 @@ pipeline {
         }
         stage('3-Docker push to Registry') {
             steps {
-                sh "docker build -t ${IMAGE_NAME} ./task3"
-                sh "docker tag ${IMAGE_NAME}:latest ${HOST_URL}:5001/${IMAGE_NAME}"
-                sh "docker push ${HOST_URL}:5001/${IMAGE_NAME}"
+                sh '''
+                   docker build -t ${IMAGE_NAME} ./task3
+                   docker tag ${IMAGE_NAME}:latest ${HOST_URL}:5001/${IMAGE_NAME}
+                   docker push ${HOST_URL}:5001/${IMAGE_NAME}
+                '''
             }
         }
         stage('4-Docker pull && Run') {
             steps {
                 sh "docker pull ${HOST_URL}:5001/${IMAGE_NAME}"
-                sh "docker images"
+                sh "docker run -d -p 8081:80 ${HOST_URL}:5001/${IMAGE_NAME}"
 
             }
         }
