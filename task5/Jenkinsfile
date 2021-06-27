@@ -1,0 +1,38 @@
+pipeline {
+    agent {
+        label 'docker_agent_2'
+    }
+    environment {
+      IMAGE_NAME = "myextratask3"
+      HOST_URL = "localhost"
+    }
+
+
+    stages {
+        stage('1-Run Registry') {
+            steps {
+                sh "docker run -d -p 5001:5000 --restart always --name registry registry:2"
+            }
+        }
+        stage('2-Git') {
+            steps {
+                git 'https://github.com/OlehBandrivskyi/DevOps_Internship.git'
+            }
+        }
+        stage('3-Docker push to Registry') {
+            steps {
+                sh "docker build -t ${IMAGE_NAME} ./task3"
+                sh "docker tag ${IMAGE_NAME}:latest ${HOST_URL}:5001/${IMAGE_NAME}"
+                sh "docker push ${HOST_URL}:5001/${IMAGE_NAME}"
+            }
+        }
+        stage('4-Docker pull && Run') {
+            steps {
+                sh "docker pull ${HOST_URL}:5001/${IMAGE_NAME}"
+                sh "docker images"
+
+            }
+        }
+
+    }
+}  
