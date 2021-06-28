@@ -111,7 +111,7 @@ Pipeline для пункта 7 [[Jenkinsfile_7](https://github.com/OlehBandrivsk
 
 **Решение:**
 
-Jenkinsfile доступен по ссылке [[Jenkisfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d3727902f1081444a71cb4dd02069e9c360ccfc7/task5/Jenkinsfile)].
+Jenkinsfile доступен по ссылке [[Jenkinsfile](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d3727902f1081444a71cb4dd02069e9c360ccfc7/task5/Jenkinsfile)].
 
 Результат:
 
@@ -126,11 +126,13 @@ Jenkinsfile доступен по ссылке [[Jenkisfile](https://github.com/
 **Решение:**
 
 1.В GitHub создано Access Token и Webhook для Jenkins
+
 2.В Jenkins создано связь с GitHub:
 
 ![img18](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/e4b3c00920926fc878afad4ecfb1f9c275d95ad0/task5/img/img18.jpg)
 
 3.В проекте добавлен триггер сборки на репозиторий
+
 4.Послесборочные операции:
 ![img19](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/e4b3c00920926fc878afad4ecfb1f9c275d95ad0/task5/img/img19.jpg)
 
