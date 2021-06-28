@@ -18,7 +18,7 @@ docker run -u jenkins:992 -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/v
 
 **Решение:**
 
-Билд агенты созданы с помощью Docker в качестве Cloud, для этого в файле /lib/systemd/system/docker.service, заменена строка ExecStart на:
+Билд агенты созданы с помощью *Configure Clouds* на Докере, для этого в файле "/lib/systemd/system/docker.service" строка "ExecStart..." обновлена следуюющим образом:
 
 ```
 ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:4243 -H unix:///var/run/docker.sock
