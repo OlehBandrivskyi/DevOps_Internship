@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    
+    environment {
+        USER_CREDENTIALS = credentials('user_name_pass')
+    }
+
+    stages {
+        stage('1-Git') {
+            steps {
+                git 'https://github.com/OlehBandrivskyi/DevOps_Internship.git'
+            }
+        }
+        stage('2-Docker Build') {
+            steps {
+                sh 'docker build -t task3 ./task3'
+            }
+        }
+        stage('3-Docker Deploy') {
+            steps {
+                sh 'docker run -d -e PASSWORD=$USER_CREDENTIALS_PSW -p 8081:80 task3 '
+            }
+        }  
+    }
+}

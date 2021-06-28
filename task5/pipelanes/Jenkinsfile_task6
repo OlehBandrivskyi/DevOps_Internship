@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1-Git') {
+            steps {
+                git 'https://github.com/OlehBandrivskyi/DevOps_Internship.git'
+            }
+        }
+        stage('2-Docker Build') {
+            steps {
+                sh 'docker build -t task3 ./task3'
+            }
+        }        
+    }
+}
