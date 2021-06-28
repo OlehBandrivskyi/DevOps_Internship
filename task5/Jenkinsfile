@@ -29,12 +29,12 @@ pipeline {
             }
         }
         stage('4-Docker pull && Run') {
-            steps {
-                sh '''
-                   docker pull ${HOST_URL}:5001/${IMAGE_NAME}
-                   docker run -d -p 8081:80 ${HOST_URL}:5001/${IMAGE_NAME}
-                '''
+            steps { 
+                sh "docker pull ${HOST_URL}:5001/${IMAGE_NAME}"
+                sh "docker run -d -p 8081:80 ${HOST_URL}:5001/${IMAGE_NAME}"
+ 
             }
         }
+
     }
 }  
