@@ -1,1 +1,1 @@
-test jenkinks auto build 
+test: jenkins git build status 
