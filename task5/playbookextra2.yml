@@ -1,0 +1,56 @@
+- name: Install Jenkins on Amazon Linux 2
+  hosts: all
+  become: true
+
+  tasks:
+
+    - name: Update all packages
+      yum:
+        name: '*'
+        state: latest
+        update_only: yes
+
+
+    - name: Install Java
+      yum:
+        name:
+          - wget
+          - java-1.8.0-openjdk
+ 
+
+    - name: Download Jenkins
+      get_url:
+        url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+        dest: /etc/yum.repos.d/jenkins.repo
+ 
+
+    - name: Import Jenkins Key
+      rpm_key:
+        state: present
+        key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+ 
+
+    - name: Install Jenkins
+      yum:
+        name: jenkins
+        state: present
+ 
+
+    - name: Start & Enable Jenkins
+      service:
+        name: jenkins
+        state: started
+        enabled: true
+      
+    - name: Wait for Jenkins
+      wait_for: timeout=30
+      delegate_to: localhost
+
+    - name: Get Jenkins password
+      shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+      changed_when: false
+      register: key 
+ 
+    - name: Show password
+      debug:
+        var: key.stdout
