@@ -1,0 +1,7 @@
+- hosts: mongodb
+  become: yes
+  roles:
+    - mongo_deploy
+    - replication
+    - create_users
+    - security

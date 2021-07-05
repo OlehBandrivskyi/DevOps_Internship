@@ -1,0 +1,22 @@
+- name: Install pymongo package
+  pip: name=pymongo state=latest 
+
+- name: Create SuperUser
+  mongodb_user:
+    database: admin
+    replica_set: "{{replicaSetName}}"
+    name: "{{rootName}}"
+    password: "{{rootPassword}}" 
+    roles: root
+    state: present
+
+- name: Create AppUser
+  mongodb_user:
+    database: admin
+    replica_set: "{{replicaSetName}}"
+    name: "{{appUser}}"
+    password: "{{appPassword}}" 
+    roles: 
+      - db: appDb
+        role: readWrite
+    state: present

@@ -1,0 +1,7 @@
+- name: Create file to initiate replication
+  template: 
+    src: repInit.j2
+    dest: ./repInit.js
+
+- name: Initialize the replication
+  command: mongo ./repInit.js
