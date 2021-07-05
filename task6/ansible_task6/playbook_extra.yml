@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: mongodb
   become: yes
   roles:
     - mongo_deploy
