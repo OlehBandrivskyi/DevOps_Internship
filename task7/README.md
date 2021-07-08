@@ -24,7 +24,7 @@
 
 **Решение:**
 
-Триггер на оповищение об изменении размера базы данных: 
+Триггер на оповещение об изменении размера базы данных: 
 
 ![img8](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/63b9839d4cf14e0548f7a9233a45ec08422a4a3a/task7/img/img8.jpg)
 ![img9](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/63b9839d4cf14e0548f7a9233a45ec08422a4a3a/task7/img/img9.jpg)
