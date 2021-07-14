@@ -23,8 +23,13 @@
 3. Настройка раннеров
 Создано два раннера: на системе, в докере.
 
+<details><summary>runners</summary>
+
 ![img3](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img3.jpg)
+
 ![img4](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img4.jpg)
+
+</details>
 
 Cозданные раннеры должны отобразится в GitLab. Репозиторий -> Settings -> CI/CD -> Runners -> Available specific runners:
 
