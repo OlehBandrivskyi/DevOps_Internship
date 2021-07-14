@@ -4,4 +4,4 @@ check:
      - echo "Docker verion:"
      - docker -v 
   tags:
-    amz2Docker
+     - amz2Docker
