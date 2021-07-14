@@ -10,4 +10,5 @@
 | :heavy_check_mark:|[Task4](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task4) | Ansible | Playbook/ Dynamic Inventory/ |
 | :heavy_check_mark:|[Task5](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task5) | Jenkins | Build Agents/ Freestyle project/ Jenkinsfile/ Integration with GitHub |
 | :heavy_check_mark:|[Task6](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task6) | Databases | SQL(MySQL)/NoSQL(MongoDB)/  Replication |
-| :hammer_and_wrench:|[Task7](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task7) |Logging&Monitoring | Zabbix/ ELK/ Grafana/ |
+| :heavy_check_mark:|[Task7](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task7) |Logging&Monitoring | Zabbix/ ELK/ Grafana/ |
+| :hammer_and_wrench:|[Task8](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task8) |Project | GitLab/ Docker/ GoogleCloud/ Kubernetes/ ELK/ |
