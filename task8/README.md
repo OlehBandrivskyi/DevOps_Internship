@@ -16,11 +16,13 @@
 ### Часть ll
 
 1. Для работы раннеров понадобится токен, его можно получить следующим образом: 
+
 Репозиторий -> Settings -> CI/CD -> Runners -> Specific runners {registration token}
 
 2. Установка раннера на удаленный инстанс или ВМ: [[Installing GitLab Runner](https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-runner)] 
 
 3. Настройка раннеров
+
 Создано два раннера: на системе, в докере.
 
 <details><summary>runners</summary>
@@ -88,7 +90,8 @@ deploy1:
 </details>
 
 Аналогичным образом проверка докер-раннера: 
- .gitlab-ci.yml
+ 
+.gitlab-ci.yml
 ```
 check:
   stage: build
