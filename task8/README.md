@@ -9,9 +9,10 @@
 1. Регистрация аккаунта [[https://gitlab.com/users/sign_up](https://gitlab.com/users/sign_up)]
 
 2. Создание группы:
+
 ![img1](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img1.jpg)
 
-3. Репозиторий под проект 
+3. Репозиторий под проект:
 ![img2](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img2.jpg)
 
 ### Часть ll
@@ -74,10 +75,12 @@ deploy1:
 </pre></details>
 
 **Результат:**
+<details><summary>screenshots</summary>
+<pre>
 ![img6](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img6.jpg)
 ![img7](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img7.jpg)
 ![img8](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img8.jpg)
-
+</pre></details>
 Аналогичным образом проверка докер-раннера: 
  .gitlab-ci.yml
 ```
