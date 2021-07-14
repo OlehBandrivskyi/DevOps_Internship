@@ -10,6 +10,7 @@
 
 2. Создание группы:
 
+
 ![img1](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img1.jpg)
 
 3. Репозиторий под проект:
@@ -20,7 +21,7 @@
 1. Для работы раннеров понадобится токен, его можно получить следующим образом: 
 Репозиторий -> Settings -> CI/CD -> Runners -> Specific runners {registration token}
 
-2. Установка раннера на удаленный инстанс или ВМ: [Installing GitLab Runner](https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-runner)] 
+2. Установка раннера на удаленный инстанс или ВМ: [[Installing GitLab Runner](https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-runner)] 
 
 3. Настройка раннеров
 Создано два раннера: на системе, в докере.
@@ -36,7 +37,6 @@ Cозданные раннеры должны отобразится в GitLab. 
 
 Для проверки первого раннера использован шаблонный пайплайн (CI/CD -> Editor): 
 <details><summary>.gitlab-ci.yml</summary>
-<pre>
 
 ```
 before_script:
@@ -71,16 +71,15 @@ deploy1:
   tags:
     - amz2Shell
 ```
-
-</pre></details>
+</details>
 
 **Результат:**
-<details><summary>screenshots</summary>
-<pre>
+
 ![img6](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img6.jpg)
 ![img7](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img7.jpg)
 ![img8](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img8.jpg)
-</pre></details>
+
+
 Аналогичным образом проверка докер-раннера: 
  .gitlab-ci.yml
 ```
