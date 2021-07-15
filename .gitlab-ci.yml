@@ -1,0 +1,7 @@
+check:
+  stage: build
+  script:
+     - echo "Docker verion:"
+     - docker -v 
+  tags:
+     - amz2Docker1
