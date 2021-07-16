@@ -1,10 +1,13 @@
 # Task 8: Project
 
+
 ## Оглавление
 
 1. [Подготовка GitLab](#подготовка-gitlab)
-2. Настройка CI
+2. [Настройка CI](#настройка-ci)
 3. To be continued...
+
+
 
 
 В качестве инструмента для CI было решено использовать GitLab.
@@ -114,14 +117,18 @@ check:
 
 
 
+
+
 ## Настройка CI
 
 ### Часть l
 
 В качестве opensource проекта использованы исходники [[wagtail](https://github.com/wagtail/wagtail)] (CMS на Django).
+
 Репозиторий на GitLab имеет следующую структуру: 
 <details><summary>tree </summary>
 
+```
 .
 ├── app
 │   ├── app
@@ -167,6 +174,7 @@ check:
 │       └── views.py
 ├── .gitignore
 └── .gitlab-ci.yml
+```
 
 </details>
 
