@@ -3,16 +3,16 @@
 
 ## Оглавление
 
-1. [Подготовка GitLab](#подготовка-gitlab)
-2. [Настройка CI](#настройка-ci)
-3. To be continued...
+- [Подготовка GitLab](#подготовка-gitlab)
+- [Настройка CI](#настройка-ci)
+- To be continued...
 
+---
 
-
-
-В качестве инструмента для CI было решено использовать GitLab.
 
 ## Подготовка GitLab 
+
+В качестве инструмента для CI было решено использовать GitLab.
 
 ### Часть l
 
@@ -112,7 +112,7 @@ check:
      - amz2Docker1
 ```
 
-![img9](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img9.jpg)
+![img9](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img9.jpg)  
 
 
 
@@ -178,7 +178,8 @@ check:
 
 </details>
 
-Ознакомится с пайплайном можно по ссылке - [[.gitlab-ci.yml](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/master/task8/.gitlab-ci.yml)] 
+Ознакомится с пайплайном можно по ссылке - [[.gitlab-ci.yml](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/master/task8/.gitlab-ci.yml)]  
+
 *Поскольку не указан тег-раннера, используется настроенный по умолчанию раннер из предыдущего раздела.*
 
 Результат выполнения: 
