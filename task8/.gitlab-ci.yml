@@ -1,0 +1,42 @@
+before_script:
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+
+variables:
+  RUNNNER_INSTANCE_URL: http://localhost:8000/
+  STATUS_CODE: '200'
+  APP_NAME: app
+  CI_GROUP: group1434
+  CI_REP_NAME: task8-project
+  TEST_CONTAINER: container1 
+
+stages:
+  - build
+  - test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - docker build -t $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:latest app/
+
+unit_test:
+  stage: test
+  script:
+    - docker run -i $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:latest python3 manage.py test
+
+status_code_test:
+  stage: test
+  script:
+    - docker run -d -p 8000:8000 --name $TEST_CONTAINER $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME
+    - sleep 6
+    - response=$( curl --write-out "%{http_code}\n" --silent --output /dev/null $RUNNNER_INSTANCE_URL)
+    - docker stop $TEST_CONTAINER
+    - docker rm $TEST_CONTAINER
+    - if [ $response -eq $STATUS_CODE ]; then echo 'app response is correct'; else echo 'Something is wrong'; exit 1; fi
+
+push_to_repository:
+  stage: deploy
+  script:
+    - docker push $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:latest
+    - docker tag $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:latest $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:$CI_COMMIT_SHORT_SHA
+    - docker push $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:$CI_COMMIT_SHORT_SHA
