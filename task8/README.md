@@ -3,9 +3,49 @@
 
 ## Оглавление
 
+- [Описание](#описание)
 - [Подготовка GitLab](#подготовка-gitlab)
 - [Настройка CI](#настройка-ci)
+- [Подготовка Kubernetes оркестрации](#)
+- [Deploy в Kubernetes](#)
 - To be continued...
+
+---
+
+## Описание
+
+Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel)] 
+Рабочий репозиторий [[@GitLab/task8-project](https://gitlab.com/group1434/task8-project)]
+
+
+### Постановка задачи:
+
+**Важные моменты:**
+
+1. В первую очередь это работа в командах. Таск идет на команду, не сдал (не смог пояснить, как работает) один - не сдали все в команде.
+
+2. После того как вы закончите работу в группах вам нужно будет провести презентацию инфраструктуры.
+
+**Tasks:**
+
+1. Выбрать себе приложение из списка (выбирайте посвежее): https://github.com/unicodeveloper/awesome-opensource-apps
+2. Выбрать CI/CD. Вы можете выбирать любой вариант, но мы рекомендуем посмотреть вот тут:  
+ https://pages.awscloud.com/awsmp-wsm-dev-workshop-series-module3-evolving-to-continuous-deployment-ty.html 
+3. Выбрать Cloud провайдера для вашей инфраструктуры.
+
+
+**Основные вещи на которые стоит обратить внимание:**
+
+* Итеграция с git;
+* Настройка CI/CD;
+* Приложение/я должны быть в контейнерах;
+* Контроль и бэкап баз данных по расписанию;
+* Настройка логирования и мониторинга для указанных сервисов;
+* Настроить безопасный доступ;
+* В качестве оркестрации использовать Kubernetes (рекомендуется клауд провайдер);
+* Проект должен быть документирован, step-by-step гайды по развертыванию с нуля;
+* EXTRA: Настройка SonarQube.
+
 
 ---
 
@@ -116,8 +156,6 @@ check:
 
 
 ---
-
-
 
 
 ## Настройка CI
@@ -247,5 +285,128 @@ docker push $CI_REGISTRY/$CI_GROUP/$CI_REP_NAME/$APP_NAME:$CI_COMMIT_SHORT_SHA
 
 ---
 
+
+## Подготовка Kubernetes оркестрации
+
+### Часть l
+
+В качестве клауд провайдера было решено использовать GoogleCloud. 
+
+После создания аккаунта и активации службы ComputerEngine(Virtual Machines) необходимо установить google cloud sdk. [[Installation instructions](https://cloud.google.com/sdk/docs/install)] 
+
+Установка на RedHot
+
+```
+sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+[google-cloud-sdk]
+name=Google Cloud SDK
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
+```
+
+```
+sudo yum install google-cloud-sdk
+```
+
+Далее необходимо выполнить инициализацию:
+
+```
+gcloud init
+```
+
+![img13](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img13.jpg)
+
+![img14](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img14.jpg)
+
+Активируем Kubernetes:
+
+```
+gcloud services enable container.googleapis.com
+```
+
+![img16](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img16.jpg)
+
+### Часть ll
+
+Устанавливаем kubectl (RedHot):
+
+```
+sudo yum install kubectl
+
+```
+
+![img15](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img15.jpg)
+
+
+Устанавливаем Helm Charts (версию архива под свою OS можно найти здесь - [[github/helm/releases](https://github.com/helm/helm/releases/tag/v3.6.3)] )
+
+```
+wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
+tar -xf helm-v3.6.3-linux-amd64.tar.gz
+cd linux-amd64/
+sudo mv helm /bin/
+
+```
+
+### Часть lll
+
+Создаем кластер (по умолчанию используется e2-medium): 
+
+``` 
+gcloud container clusters create cluster_name
+```
+![img17](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img17.jpg)
+![img18](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img18.jpg)
+
+Пример структуры проекта:
+
+```
+.project-deploy-helm
+│
+├── Chart.yaml
+├── templates
+│   ├── deployment.yaml
+│   └── service.yaml
+└── values.yaml
+```
+
+Деплой проекта:
+
+``` 
+helm update --install app project-deploy-helm/
+```
+![img23](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img23.jpg)
+
+В качестве примера произведен деплой PostgreSQL
+
+![img25](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img25.jpg)
+
+- удаление проекта:
+
+``` 
+helm uninstall app
+```
+- удаление кластера:
+
+``` 
+gcloud container clusters delete project8 
+```
+
+### Часть lV
+
+Подготовка секретов
+
+
+---
+
+## Deploy в Kubernetes 
+
+
+---
 
 *To be continued...*
