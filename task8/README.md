@@ -6,8 +6,8 @@
 - [Описание](#описание)
 - [Подготовка GitLab](#подготовка-gitlab)
 - [Настройка CI](#настройка-ci)
-- [Подготовка Kubernetes оркестрации](#)
-- [Deploy в Kubernetes](#)
+- [Подготовка Kubernetes оркестрации](#подготовка-kubernetes-оркестрации)
+- [Deploy в Kubernetes](#deploy-в-kubernetes)
 - To be continued...
 
 ---
@@ -15,6 +15,7 @@
 ## Описание
 
 Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel)] 
+
 Рабочий репозиторий [[@GitLab/task8-project](https://gitlab.com/group1434/task8-project)]
 
 
@@ -35,6 +36,7 @@
 
 
 **Основные вещи на которые стоит обратить внимание:**
+
 
 * Итеграция с git;
 * Настройка CI/CD;
@@ -337,7 +339,6 @@ gcloud services enable container.googleapis.com
 
 ```
 sudo yum install kubectl
-
 ```
 
 ![img15](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/b84553e87cefe576b79c1be5122b5b99905d1583/task8/img/img15.jpg)
@@ -350,7 +351,6 @@ wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
 tar -xf helm-v3.6.3-linux-amd64.tar.gz
 cd linux-amd64/
 sudo mv helm /bin/
-
 ```
 
 ### Часть lll
