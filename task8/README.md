@@ -810,6 +810,7 @@ deploy_to_gcloud:
 ![img56](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img56.jpg)
 
 </details>
+
 ---
 
 ## Настройка логирования и мониторинга
