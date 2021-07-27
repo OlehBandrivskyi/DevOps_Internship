@@ -401,7 +401,7 @@ gcloud container clusters create cluster_name
 └── values.yaml
 ```
 
-Деплой проекта:
+<details><summary>Деплой тестового проекта:</summary>
 
 ``` 
 helm update --install app project-deploy-helm/
@@ -422,6 +422,7 @@ helm uninstall app
 ``` 
 gcloud container clusters delete project8 
 ```
+</details>
 
 Чтобы получить доступ к кластеру с помощью gitlab-раннера, необходимо скопировать файл ~/.kube/config по следующему пути:
 
