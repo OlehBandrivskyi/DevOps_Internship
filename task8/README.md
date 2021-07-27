@@ -103,6 +103,12 @@
 
 </details>
 
+Для работы shell-Раннера с докером необходимо добавить его в группу докера:
+
+```
+sudo usermod -aG docker gitlab-runner
+```
+
 Cозданные раннеры должны отобразится в GitLab. Репозиторий -> Settings -> CI/CD -> Runners -> Available specific runners:
 
 ![img5](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/4d0025f5090a9ae82ae4ba7870af9d79d0635746/task8/img/img5.jpg)
@@ -417,11 +423,21 @@ helm uninstall app
 gcloud container clusters delete project8 
 ```
 
-Для доступа к кластеру с помощью gitlab-раннера, необходимо скопировать файл ~/.kube/config по следующему пути:
+Чтобы получить доступ к кластеру с помощью gitlab-раннера, необходимо скопировать файл ~/.kube/config по следующему пути:
 
 ```
 /home/gitlab-runner/.kube/config
 ```
+
+Для этого выполняем следующие команды:
+
+``` 
+sudo passwd gitlab-runner
+su gitlab-runner
+cd ~
+mkdir .kube
+nano ./kube/config
+``` 
 
 ### Часть lV - Подготовка секретов 
 
@@ -918,7 +934,7 @@ deploy_to_gcloud:
 
 Доступны следующие варианты получения уведомлений:
 
-<details><summary>alerting</summary>
+<details><summary>notification channels</summary>
 
 ![img50](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img50.jpg)
 
