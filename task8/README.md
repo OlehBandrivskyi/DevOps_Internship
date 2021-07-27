@@ -5,26 +5,26 @@
 
 - [Описание](#описание)
 - [Подготовка GitLab](#подготовка-gitlab)
-  - [Регистрация](#)
-  - [Раннеры](#)
-  - [Тестовый CI](#)
+  - [Регистрация](#часть-l---регистрация)
+  - [Раннеры](#часть-ll---раннеры)
+  - [Тестовый CI](#часть-lll---тестовый-ci)
 - [Настройка CI](#настройка-ci)
-  - [Знакомство с wagtail](#)
-  - [Стадии пайплайна](#)
-  - [GitLab Container Registery](#)
+  - [Знакомство с wagtail](#часть-l---знакомство-с-wagtail)
+  - [Стадии пайплайна](#часть-ll---стадии-пайплайна)
+  - [GitLab Container Registery](#часть-lll---gitlab-container-registery)
 - [Подготовка Kubernetes оркестрации](#подготовка-kubernetes-оркестрации)
-  - [Настройка GoogleCloud](#)
-  - [Настройка kubectl](#)
-  - [Развертывание кластера и helm](#)
-  - [Подготовка секретов](#)
+  - [Настройка GoogleCloud](#часть-l---настройка-googlecloud)
+  - [Настройка kubectl](#часть-ll---настройка-kubectl)
+  - [Развертывание кластера и helm](#часть-lll---развертывание-кластера-и-helm)
+  - [Подготовка секретов](#часть-lv---подготовка-секретов)
 - [Deploy в Kubernetes](#deploy-в-kubernetes)
-  - [Предварительная подготовка приложения](#)
-  - [Структура Helm](#)
-  - [Деплой в кластер](#)
-- [Настройка логирования и мониторинга](#)
-  - [Логи - сервисы Logging && Error Reporting](#)
-  - [Мониторинг](#)
-  - [Grafana](#)
+  - [Предварительная подготовка приложения](#часть-l---предварительная-подготовка-приложения)
+  - [Структура Helm](#часть-ll---структура-helm)
+  - [Деплой в кластер](#часть-lll---деплой-в-кластер)
+- [Настройка логирования и мониторинга](#настройка-логирования-и-мониторинга)
+  - [Логи - сервисы Logging && Error Reporting](#часть-l---логи)
+  - [Мониторинг](#часть-ll---мониторинг)
+  - [Grafana](#часть-lll---grafana)
 - [Интеграция SonarQube](#)
 - To be continued...
 
@@ -32,7 +32,7 @@
 
 ## Описание
 
-Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel)] 
+Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel){:target="_blank"}] 
 
 Рабочий репозиторий [[@GitLab/task8-project](https://gitlab.com/group1434/task8-project)]
 
@@ -540,7 +540,7 @@ status_code_test:
 
 ### Часть ll - Структура Helm
 
-Структура helm проекта из предыдущего раздела доступна по ссылке [[project-deploy-helm]()]
+Структура helm проекта из предыдущего раздела доступна по ссылке [[project-deploy-helm](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task8/project-deploy-helm)]
 
 <details><summary>values.yaml </summary>
 
@@ -801,13 +801,13 @@ deploy_to_gcloud:
 
 <details><summary>templates/service.yaml </summary>
 
-![img53]()
+![img53](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img53.jpg)
 
-![img54]()
+![img54](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img54.jpg)
 
-![img55]()
+![img55](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img55.jpg)
 
-![img56]()
+![img56](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img56.jpg)
 
 </details>
 ---
@@ -866,7 +866,7 @@ deploy_to_gcloud:
 
 ![img44](https://github.com/OlehBandrivskyi/DevOps_Internship/blob/d11cebf636b880f96036b01a402d01831ed869b7/task8/img/img44.jpg)
 
-<details>
+</details>
 
 
 Создаем уведомление при поступлении новых критических ошибок, для этого выбираем: 
