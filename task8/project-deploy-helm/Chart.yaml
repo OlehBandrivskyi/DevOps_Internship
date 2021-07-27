@@ -1,0 +1,14 @@
+apiVersion: v2
+name: Project-task8-Deploy
+description: Deploy with Kuber
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
+keywords:
+   - postgresql
+   - wagtail
+
+maintainers:
+   - giturl: https://gitlab.com/group1434/task8-project
+   - container_registory: https://gitlab.com/group1434/task8-project/container_registry
