@@ -32,7 +32,7 @@
 
 ## Описание
 
-Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel){:target="_blank"}] 
+Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel)] 
 
 Рабочий репозиторий [[@GitLab/task8-project](https://gitlab.com/group1434/task8-project)]
 
