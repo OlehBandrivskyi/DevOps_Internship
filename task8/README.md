@@ -25,7 +25,6 @@
   - [Логи - сервисы Logging && Error Reporting](#часть-l---логи)
   - [Мониторинг](#часть-ll---мониторинг)
   - [Grafana](#часть-lll---grafana)
-- [Интеграция SonarQube](#)
 - To be continued...
 
 ---
@@ -35,6 +34,10 @@
 Разработка проекта ведется совместными усилиями с @AlexandrRekun [[github.com/rekusha](https://github.com/rekusha/exadel)] 
 
 Рабочий репозиторий [[@GitLab/task8-project](https://gitlab.com/group1434/task8-project)]
+
+**Внимание!**
+
+Финальная версия проекта и инструкция "step-by-step" представлена здесь -> [[rekusha/task8/readme.md](https://github.com/rekusha/exadel/tree/master/task8#readme)]
 
 
 ### Постановка задачи:
@@ -433,6 +436,7 @@ gcloud container clusters delete project8
 Для этого выполняем следующие команды:
 
 ``` 
+usermod -aG wheel gitlab-runner
 sudo passwd gitlab-runner
 su gitlab-runner
 cd ~
