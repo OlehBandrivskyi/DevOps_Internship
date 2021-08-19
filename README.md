@@ -1,5 +1,5 @@
 # DevOps Exadel Internship
-![Status: in-progress](https://img.shields.io/badge/Status-in--progress-green.svg?style=flat-square)
+![Status: completed](https://img.shields.io/badge/Status-completed-success.svg?style=flat-square)
 
 Репозиторий отображает процесс выполнение заданий, и содержит следующие разделы:
 | Статус | Название директории | Технология | Описание | 
@@ -11,4 +11,4 @@
 | :heavy_check_mark:|[Task5](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task5) | Jenkins | Build Agents/ Freestyle project/ Jenkinsfile/ Integration with GitHub |
 | :heavy_check_mark:|[Task6](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task6) | Databases | SQL(MySQL)/NoSQL(MongoDB)/  Replication |
 | :heavy_check_mark:|[Task7](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task7) |Logging&Monitoring | Zabbix/ ELK/ Grafana/ |
-| :hammer_and_wrench:|[Task8](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task8) |Project | GitLab/ Docker/ GoogleCloud/ Kubernetes/ ELK/ |
+|  :heavy_check_mark:|[Task8](https://github.com/OlehBandrivskyi/DevOps_Internship/tree/master/task8) |Project | GitLab/ Docker/ GoogleCloud/ Kubernetes/ Prometheus/ |
